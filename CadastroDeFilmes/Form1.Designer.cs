@@ -39,7 +39,7 @@
             this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AnoDeLancamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Duracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Avaliacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Avaliação = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +51,8 @@
             this.novoFilmeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1177, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,28 +63,28 @@
             this.salvarDadosToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.novoFilmeToolStripMenuItem.Name = "novoFilmeToolStripMenuItem";
-            this.novoFilmeToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
+            this.novoFilmeToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.novoFilmeToolStripMenuItem.Text = "Novo Filme";
             this.novoFilmeToolStripMenuItem.Click += new System.EventHandler(this.novoFilmeToolStripMenuItem_Click);
             // 
             // carregarDadosToolStripMenuItem
             // 
             this.carregarDadosToolStripMenuItem.Name = "carregarDadosToolStripMenuItem";
-            this.carregarDadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.carregarDadosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.carregarDadosToolStripMenuItem.Text = "Carregar Dados";
             this.carregarDadosToolStripMenuItem.Click += new System.EventHandler(this.carregarDadosToolStripMenuItem_Click);
             // 
             // salvarDadosToolStripMenuItem
             // 
             this.salvarDadosToolStripMenuItem.Name = "salvarDadosToolStripMenuItem";
-            this.salvarDadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.salvarDadosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.salvarDadosToolStripMenuItem.Text = "Salvar Dados";
             this.salvarDadosToolStripMenuItem.Click += new System.EventHandler(this.salvarDadosToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -99,12 +100,13 @@
             this.Genero,
             this.AnoDeLancamento,
             this.Duracao,
-            this.Avaliacao});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
+            this.Avaliação});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(788, 228);
+            this.dataGridView1.Size = new System.Drawing.Size(1168, 185);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -145,23 +147,23 @@
             this.Duracao.Name = "Duracao";
             this.Duracao.Width = 125;
             // 
-            // Avaliacao
+            // Avaliação
             // 
-            this.Avaliacao.HeaderText = "Avaliação";
-            this.Avaliacao.MinimumWidth = 6;
-            this.Avaliacao.Name = "Avaliacao";
-            this.Avaliacao.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Avaliacao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Avaliacao.Width = 125;
+            this.Avaliação.HeaderText = "Avaliação";
+            this.Avaliação.MinimumWidth = 6;
+            this.Avaliação.Name = "Avaliação";
+            this.Avaliação.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Avaliação.Width = 125;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1177, 366);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -185,7 +187,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
         private System.Windows.Forms.DataGridViewTextBoxColumn AnoDeLancamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Duracao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Avaliacao;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Avaliação;
     }
 }
 

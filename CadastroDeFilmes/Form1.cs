@@ -33,6 +33,7 @@ namespace CadastroDeFilmes
         private void Form1_Load(object sender, EventArgs e)
         {
 
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -41,7 +42,14 @@ namespace CadastroDeFilmes
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        
         {
+
+            DataGridViewComboBoxColumn CheckedListBox = new DataGridViewComboBoxColumn();
+            CheckedListBox.HeaderText = "Avalie";
+            CheckedListBox.Items.AddRange("5", "4", "3", "2", "1");
+            dataGridView1.Columns.Add(CheckedListBox);
+            
 
         }
         ///comentario teste 
