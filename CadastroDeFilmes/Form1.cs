@@ -38,5 +38,55 @@ namespace CadastroDeFilmes
         {
 
         }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        ///comentario teste 
+        private void novoFilmeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            filmesTable.Rows.Add();
+        }
+
+        private void salvarDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            { 
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "XML Files (*.xml)|*.xml";
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        filmesTable.WriteXml(saveFileDialog.FileName);
+                    }
+            }
+            catch (Exception ex)
+            {
+                    MessageBox.Show("Erro ao salvar os dados: " + ex.Message);
+            }
+            
+        }
+        private void carregarDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            { 
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                    openFileDialog.Filter = "XML Files (*.xml)|*.xml";
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        filmesTable.Clear();
+                        filmesTable.ReadXml(openFileDialog.FileName);
+                    }
+            }
+            catch (Exception ex)
+            {
+                    MessageBox.Show("Erro ao importar dados: " + ex.Message);
+            }
+            
+        }
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

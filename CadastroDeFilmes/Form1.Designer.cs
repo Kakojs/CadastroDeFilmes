@@ -39,7 +39,7 @@
             this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AnoDeLancamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Duracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Avaliacao = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Avaliacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,27 +64,34 @@
             this.novoFilmeToolStripMenuItem.Name = "novoFilmeToolStripMenuItem";
             this.novoFilmeToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
             this.novoFilmeToolStripMenuItem.Text = "Novo Filme";
+            this.novoFilmeToolStripMenuItem.Click += new System.EventHandler(this.novoFilmeToolStripMenuItem_Click);
             // 
             // carregarDadosToolStripMenuItem
             // 
             this.carregarDadosToolStripMenuItem.Name = "carregarDadosToolStripMenuItem";
             this.carregarDadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.carregarDadosToolStripMenuItem.Text = "Carregar Dados";
+            this.carregarDadosToolStripMenuItem.Click += new System.EventHandler(this.carregarDadosToolStripMenuItem_Click);
             // 
             // salvarDadosToolStripMenuItem
             // 
             this.salvarDadosToolStripMenuItem.Name = "salvarDadosToolStripMenuItem";
             this.salvarDadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.salvarDadosToolStripMenuItem.Text = "Salvar Dados";
+            this.salvarDadosToolStripMenuItem.Click += new System.EventHandler(this.salvarDadosToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Titulo,
@@ -95,10 +102,11 @@
             this.Avaliacao});
             this.dataGridView1.Location = new System.Drawing.Point(0, 31);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(788, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(788, 228);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // Titulo
             // 
@@ -142,6 +150,8 @@
             this.Avaliacao.HeaderText = "Avaliação";
             this.Avaliacao.MinimumWidth = 6;
             this.Avaliacao.Name = "Avaliacao";
+            this.Avaliacao.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Avaliacao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Avaliacao.Width = 125;
             // 
             // Form1
@@ -175,7 +185,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
         private System.Windows.Forms.DataGridViewTextBoxColumn AnoDeLancamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Duracao;
-        private System.Windows.Forms.DataGridViewButtonColumn Avaliacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Avaliacao;
     }
 }
 
