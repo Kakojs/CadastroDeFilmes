@@ -21,6 +21,7 @@ namespace CadastroDeFilmes
         private void InicializarDataTable()
         {
             filmesTable = new DataTable();
+            filmesTable.TableName = "Filmes";
             filmesTable.Columns.Add("Titulo", typeof(string));
             filmesTable.Columns.Add("Diretor", typeof(string));
             filmesTable.Columns.Add("Genero", typeof(string));
@@ -58,7 +59,8 @@ namespace CadastroDeFilmes
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
                         filmesTable.WriteXml(saveFileDialog.FileName);
-                    }
+                        MessageBox.Show("Dados salvos com sucesso!");
+                }
             }
             catch (Exception ex)
             {
