@@ -137,6 +137,7 @@
             // 
             // AnoDeLancamento
             // 
+            this.AnoDeLancamento.DividerWidth = 2;
             this.AnoDeLancamento.HeaderText = "Ano de Lançamento ";
             this.AnoDeLancamento.MinimumWidth = 6;
             this.AnoDeLancamento.Name = "AnoDeLancamento";

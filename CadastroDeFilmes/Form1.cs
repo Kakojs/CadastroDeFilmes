@@ -13,6 +13,7 @@ namespace CadastroDeFilmes
     public partial class Form1 : Form
     {
         private DataTable filmesTable;
+
         public Form1()
         {
             InitializeComponent();
@@ -24,10 +25,16 @@ namespace CadastroDeFilmes
             filmesTable.TableName = "Filmes";
             filmesTable.Columns.Add("Titulo", typeof(string));
             filmesTable.Columns.Add("Diretor", typeof(string));
-            filmesTable.Columns.Add("Genero", typeof(string));
+            filmesTable.Columns.Add("Gênero", typeof(string));
             filmesTable.Columns.Add("Ano De Lançamento", typeof(int));
             filmesTable.Columns.Add("Duração", typeof(int));
             filmesTable.Columns.Add("Avaliação", typeof(int));
+
+            dataGridView1.AutoGenerateColumns = true;
+            dataGridView1.DataSource = filmesTable;
+            MessageBox.Show("DataTable vinculado ao DataGridView com sucesso!");
+
+
 
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -63,7 +70,11 @@ namespace CadastroDeFilmes
         ///comentario teste 
         private void novoFilmeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            filmesTable.Rows.Add();
+            if (!filmesTable.Rows.Contains(""))
+            {   
+                
+                filmesTable.Rows.Add();
+            }
         }
 
         private void salvarDadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,3 +119,6 @@ namespace CadastroDeFilmes
         }
     }
 }
+
+
+
