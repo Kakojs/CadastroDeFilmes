@@ -40,17 +40,25 @@ namespace CadastroDeFilmes
         {
 
         }
-
+        private bool colunaAdicionada = false;
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         
         {
+            if (!colunaAdicionada)
+            {
+                string nomeDaColuna = "Avalie";
 
-            DataGridViewComboBoxColumn CheckedListBox = new DataGridViewComboBoxColumn();
-            CheckedListBox.HeaderText = "Avalie";
-            CheckedListBox.Items.AddRange("5", "4", "3", "2", "1");
-            dataGridView1.Columns.Add(CheckedListBox);
-            
 
+                if (!dataGridView1.Columns.Contains("Avalie"))
+                {
+                    DataGridViewComboBoxColumn CheckedListBox = new DataGridViewComboBoxColumn();
+                    CheckedListBox.HeaderText = "Avalie";
+                    CheckedListBox.Items.AddRange("5", "4", "3", "2", "1");
+
+                    dataGridView1.Columns.Add(CheckedListBox);
+                    colunaAdicionada = true;
+                }
+            }
         }
         ///comentario teste 
         private void novoFilmeToolStripMenuItem_Click(object sender, EventArgs e)

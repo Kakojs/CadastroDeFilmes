@@ -51,8 +51,8 @@
             this.novoFilmeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1177, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1569, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,28 +63,28 @@
             this.salvarDadosToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.novoFilmeToolStripMenuItem.Name = "novoFilmeToolStripMenuItem";
-            this.novoFilmeToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.novoFilmeToolStripMenuItem.Size = new System.Drawing.Size(99, 26);
             this.novoFilmeToolStripMenuItem.Text = "Novo Filme";
             this.novoFilmeToolStripMenuItem.Click += new System.EventHandler(this.novoFilmeToolStripMenuItem_Click);
             // 
             // carregarDadosToolStripMenuItem
             // 
             this.carregarDadosToolStripMenuItem.Name = "carregarDadosToolStripMenuItem";
-            this.carregarDadosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.carregarDadosToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.carregarDadosToolStripMenuItem.Text = "Carregar Dados";
             this.carregarDadosToolStripMenuItem.Click += new System.EventHandler(this.carregarDadosToolStripMenuItem_Click);
             // 
             // salvarDadosToolStripMenuItem
             // 
             this.salvarDadosToolStripMenuItem.Name = "salvarDadosToolStripMenuItem";
-            this.salvarDadosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.salvarDadosToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.salvarDadosToolStripMenuItem.Text = "Salvar Dados";
             this.salvarDadosToolStripMenuItem.Click += new System.EventHandler(this.salvarDadosToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -93,6 +93,7 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Titulo,
@@ -101,12 +102,13 @@
             this.AnoDeLancamento,
             this.Duracao,
             this.Avaliação});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1168, 185);
+            this.dataGridView1.Size = new System.Drawing.Size(1557, 228);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -157,13 +159,13 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 366);
+            this.ClientSize = new System.Drawing.Size(1569, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
