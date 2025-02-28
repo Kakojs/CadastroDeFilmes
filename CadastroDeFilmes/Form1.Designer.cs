@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.novoFilmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carregarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -137,6 +138,9 @@
             // 
             // AnoDeLancamento
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Format = "dd/dd/dddd";
+            this.AnoDeLancamento.DefaultCellStyle = dataGridViewCellStyle1;
             this.AnoDeLancamento.DividerWidth = 2;
             this.AnoDeLancamento.HeaderText = "Ano de Lançamento ";
             this.AnoDeLancamento.MinimumWidth = 6;
