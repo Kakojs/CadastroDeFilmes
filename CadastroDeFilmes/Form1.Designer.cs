@@ -39,7 +39,7 @@
             this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AnoDeLancamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Duracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Avaliação = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Avaliação = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +63,7 @@
             this.salvarDadosToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.novoFilmeToolStripMenuItem.Name = "novoFilmeToolStripMenuItem";
-            this.novoFilmeToolStripMenuItem.Size = new System.Drawing.Size(99, 26);
+            this.novoFilmeToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
             this.novoFilmeToolStripMenuItem.Text = "Novo Filme";
             this.novoFilmeToolStripMenuItem.Click += new System.EventHandler(this.novoFilmeToolStripMenuItem_Click);
             // 
@@ -110,7 +110,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1557, 228);
             this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick_1);
             // 
             // Titulo
             // 
@@ -145,17 +145,19 @@
             // 
             // Duracao
             // 
+            this.Duracao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Duracao.HeaderText = "Duração (em minutos)";
             this.Duracao.MinimumWidth = 6;
             this.Duracao.Name = "Duracao";
-            this.Duracao.Width = 125;
+            this.Duracao.Width = 153;
             // 
             // Avaliação
             // 
-            this.Avaliação.HeaderText = "Avaliação";
+            this.Avaliação.HeaderText = "De sua opinião";
             this.Avaliação.MinimumWidth = 6;
             this.Avaliação.Name = "Avaliação";
             this.Avaliação.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Avaliação.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Avaliação.Width = 125;
             // 
             // Form1
@@ -190,7 +192,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
         private System.Windows.Forms.DataGridViewTextBoxColumn AnoDeLancamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Duracao;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Avaliação;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Avaliação;
     }
 }
 
