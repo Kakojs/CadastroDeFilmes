@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.novoFilmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carregarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,21 +71,21 @@
             // carregarDadosToolStripMenuItem
             // 
             this.carregarDadosToolStripMenuItem.Name = "carregarDadosToolStripMenuItem";
-            this.carregarDadosToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.carregarDadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.carregarDadosToolStripMenuItem.Text = "Carregar Dados";
             this.carregarDadosToolStripMenuItem.Click += new System.EventHandler(this.carregarDadosToolStripMenuItem_Click);
             // 
             // salvarDadosToolStripMenuItem
             // 
             this.salvarDadosToolStripMenuItem.Name = "salvarDadosToolStripMenuItem";
-            this.salvarDadosToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.salvarDadosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.salvarDadosToolStripMenuItem.Text = "Salvar Dados";
             this.salvarDadosToolStripMenuItem.Click += new System.EventHandler(this.salvarDadosToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -138,9 +138,9 @@
             // 
             // AnoDeLancamento
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Format = "dd/dd/dddd";
-            this.AnoDeLancamento.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Format = "dd/dd/dddd";
+            this.AnoDeLancamento.DefaultCellStyle = dataGridViewCellStyle3;
             this.AnoDeLancamento.DividerWidth = 2;
             this.AnoDeLancamento.HeaderText = "Ano de Lançamento ";
             this.AnoDeLancamento.MinimumWidth = 6;
