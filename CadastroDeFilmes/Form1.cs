@@ -31,11 +31,6 @@ namespace CadastroDeFilmes
             filmesTable.Columns.Add("AnoDeLancamento", typeof(int));
             filmesTable.Columns.Add("Duração", typeof(int));
             filmesTable.Columns.Add("Avaliação", typeof(string));
-
-
-
-
-
         }
         private void ConfigurarDataGridView()
         {
@@ -43,7 +38,6 @@ namespace CadastroDeFilmes
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.DataSource = filmesTable;
             dataGridView1.Columns.Clear();
-
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
             {
                 DataPropertyName = "Titulo",
