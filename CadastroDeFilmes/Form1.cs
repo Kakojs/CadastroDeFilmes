@@ -19,7 +19,7 @@ namespace CadastroDeFilmes
             InitializeComponent();
             InicializarDataTable();
             ConfigurarDataGridView();
-            AdicionarColunaAvaliacao();
+            //AdicionarColunaAvaliacao();
         }
         private void InicializarDataTable()
         {
@@ -30,10 +30,13 @@ namespace CadastroDeFilmes
             filmesTable.Columns.Add("Gênero", typeof(string));
             filmesTable.Columns.Add("AnoDeLancamento", typeof(int));
             filmesTable.Columns.Add("Duração", typeof(int));
-            filmesTable.Columns.Add("Avaliação", typeof(string));
+            filmesTable.Columns.Add("Avaliação", typeof(int));
         }
+
         private void ConfigurarDataGridView()
+
         {
+            
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.DataSource = filmesTable;
@@ -58,6 +61,7 @@ namespace CadastroDeFilmes
 
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
             {
+
                 DataPropertyName = "AnoDeLancamento",
                 HeaderText = "Ano de Lançamento"
             });
@@ -66,27 +70,23 @@ namespace CadastroDeFilmes
                 DataPropertyName = "Duração",
                 HeaderText = "Duração"
             });
-            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn
+            
             {
-                DataPropertyName = "De sua opinião",
-                HeaderText = "De sua opinião"
-            });
-        }
-        private void AdicionarColunaAvaliacao()
-        {
-            if (!dataGridView1.Columns.Contains("Avalie"))
-            {
-                DataGridViewComboBoxColumn avaliacaoColumn = new DataGridViewComboBoxColumn
+                if (!dataGridView1.Columns.Contains("Avalie"))
                 {
-                    HeaderText = "Avalie",
-                    Name = "Avalie",
-                    DataPropertyName ="Avaliação"
-                };
-                avaliacaoColumn.Items.AddRange("5", "4", "3", "2", "1");
+                    DataGridViewComboBoxColumn avaliacaoColumn = new DataGridViewComboBoxColumn
+                    {
+                        HeaderText = "Avalie",
+                        Name = "Avalie",
+                        DataPropertyName = "Avaliação"
+                    };
+                    avaliacaoColumn.Items.AddRange("5", "4", "3", "2", "1");
                     dataGridView1.Columns.Add(avaliacaoColumn);
-                
+
+                }
             }
         }
+        
         private void novoFilmeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             filmesTable.Rows.Add();
